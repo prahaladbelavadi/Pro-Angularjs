@@ -21,9 +21,6 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
     // routing handlers
-
-
-
       .when('/dashboard', {
         templateUrl: 'views/dashboard.html',
         controller: 'DashboardCtrl'
@@ -33,6 +30,6 @@ angular
         controller: 'WatchlistCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/dashboard'
       });
   });

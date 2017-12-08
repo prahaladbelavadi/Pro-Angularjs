@@ -28,6 +28,10 @@ angular
         templateUrl: 'views/dashboard.html',
         controller: 'DashboardCtrl'
       })
+      .when('/watchlist', {
+        templateUrl: 'views/watchlist.html',
+        controller: 'WatchlistCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

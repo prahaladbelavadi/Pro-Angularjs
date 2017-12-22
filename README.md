@@ -4,5 +4,4 @@ Solutions, material and insights from Pro AngularJS book by Valeri Karpov
 - install npm, bower and grunt
 - Serve using ``` grunt serve```
 
-Reference:
-- [Pro AngularJS - Valeri Karpov](./reference/Professional-AngularJS-Kindle-Edition-by-Valeri-Karpov-2015.pdf)
+Companion Code available [here](http://www.wrox.com/WileyCDA/WroxTitle/Professional-AngularJS.productCd-1118832078,descCd-DOWNLOAD.html)

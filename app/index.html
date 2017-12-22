@@ -25,30 +25,31 @@
   <span class="icon-bar"></span>
   </button>
         <a class="navbar-brand" href="/">Stock Dog</a> </div>
-      <!–– Collect the nav links and other content for toggling ––>
+      <!-- <!–– Collect the nav links and other content for toggling ––> -->
       <div class="collapse navbar-collapse" id="main-nav">
         <ul class="nav navbar-nav navbar-right">
-          <!–– [2] Add active class to necessary item ––>
+          <!-- <!–– [2] Add active class to necessary item ––> -->
           <li ng-class="{active: activeView === 'dashboard'}">
             <a href="/">Dashboard</a> </li>
           <li ng-class="{active: activeView === 'watchlist'}" class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown">
-  Watchlists <b class="caret"></b> </a>
+              Watchlists
+            <b class="caret"></b> </a>
             <ul class="dropdown-menu">
               <li ng-if="!watchlists.length" class="dropdown-header">
                 No lists found </li>
-              <!–– [3] Create a unique link for each watchlist ––>
+              <!-- <!–– [3] Create a unique link for each watchlist ––> -->
               <li ng-repeat="list in watchlists track by $index">
                 <a href="/#/watchlist/{{list.id}}">{{list.name}}</a> </li>
             </ul>
           </li>
         </ul>
       </div>
-      <!–– /.navbar-collapse ––>
+      <!-- <!–– /.navbar-collapse ––> -->
     </div>
-    <!–– /.container-fluid ––>
+    <!-- <!–– /.container-fluid ––> -->
   </nav>
-  <!–– Main container ––>
+  <!-- <!–– Main container ––> -->
   <div class="container-fluid" id="main">
     <div ng-view=""></div>
     <div class="footer">
@@ -58,7 +59,9 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
@@ -78,6 +81,7 @@
         <script src="scripts/directives/stk-watchlist-panel.js"></script>
         <script src="scripts/controllers/dashboard.js"></script>
         <script src="scripts/controllers/watchlist.js"></script>
+        <script src="scripts/controllers/main.js"></script>
         <!-- endbuild -->
 </body>
 </html>

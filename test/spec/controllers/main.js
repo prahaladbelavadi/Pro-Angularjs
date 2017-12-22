@@ -1,22 +1,14 @@
 'use strict';
-
-describe('Controller: MainCtrl', function () {
-
-  // load the controller's module
-  beforeEach(module('stockDogApp'));
-
-  var MainCtrl,
-    scope;
-
-  // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope) {
-    scope = $rootScope.$new();
-    MainCtrl = $controller('MainCtrl', {
-      $scope: scope
-    });
-  }));
-
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
+angular.module('stockDogApp')
+  .controller('MainCtrl', function($scope, $location, WatchlistService) {
+    // [1] Populate watchlists for dynamic nav links $scope.watchlists = WatchlistService.query();
+    // [2] Using the $location.path() function as a $watch expression $scope.$watch(function () {
+    return $location.path();
+  }, function(path) {
+    if (_.contains(path, 'watchlist')) {
+      $scope.activeView = 'watchlist';
+    } else {
+      $scope.activeView = 'dashboard';
+    }
   });
 });
